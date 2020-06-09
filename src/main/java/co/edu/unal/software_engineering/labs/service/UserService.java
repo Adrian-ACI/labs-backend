@@ -22,7 +22,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public boolean isRightUser(RegisterUserPOJO user) {
+    public boolean isRightUser() {
         boolean correctness = user.getNames() != null && user.getPassword() != null && user.getUsername() != null
                 && user.getSurnames() != null;
         if (correctness) {
