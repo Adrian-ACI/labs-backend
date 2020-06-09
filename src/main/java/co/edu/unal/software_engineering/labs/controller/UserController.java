@@ -49,7 +49,7 @@ public class UserController {
 
     // registro de nuevo rol de usuario
 
-    @PostMapping(value = { "/registro/nuevo-rol/{roleId}" }, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = {}, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> registerRoleToUser(@PathVariable Integer roleId, @RequestBody LoginUserPOJO pojo) {
         Role role = roleService.findById(roleId);
         String username = SecurityContextHolder.getContext().getAuthentication().getName();
